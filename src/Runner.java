@@ -97,7 +97,6 @@ public class Runner {
                     "StGroup", "Student.id_group=StGroup.id", "Curator", "StGroup.id_curator=Curator.id");
             System.out.println("Full students info:");
             printInfo(fullStudentInfo);
-            printSeparator();
 
 // Вывести на экран количество студентов
 
@@ -109,7 +108,6 @@ public class Runner {
             List<String> femaleStudents = studentTable.selectWhere("fio", "sex='f'");
             System.out.println("Female students:");
             printInfo(femaleStudents);
-            printSeparator();
 
 //Обновить данные по группе сменив куратора
 
@@ -120,7 +118,6 @@ public class Runner {
             List<String> groupsInfo = groupTable.selectJoin("StGroup.id, StGroup.name, Curator.fio", "Curator", "StGroup.id_curator=Curator.id");
             System.out.println("Groups with curators");
             printInfo(groupsInfo);
-            printSeparator();
 
 //Используя вложенные запросы вывести на экран студентов из определенной группы(поиск по имени группы)
 
@@ -142,5 +139,6 @@ public class Runner {
         for (String info : data) {
             System.out.println(info);
         }
+        printSeparator();
     }
 }
