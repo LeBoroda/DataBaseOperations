@@ -32,8 +32,4 @@ public class Student {
     public String toString(){
         return String.format("'%s', '%s', '%s', '%s'", getId(), getFio(), getSex(), getIdGroup());
     }
-
-    public String printMe(){
-        return String.format("ID - %-5s, FIO - %-20s, SEX - %-5s, GROUP - %-10s", getId(), getFio(), getSex(), getIdGroup());
-    }
 }
